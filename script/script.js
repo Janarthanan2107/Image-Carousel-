@@ -69,7 +69,7 @@ buttons.forEach((btn) => {
                 console.log(index)
             }
         }
-        container.style.background = `url("https://janarthanan2107.github.io/Image-Carousel-Basic/assets/${imgList[index]}.jpg") center/cover fixed no-repeat`
+        container.style.background = `url("assets/${imgList[index]}.jpg") center/cover fixed no-repeat`
         updateActiveButton()
     })
 })
