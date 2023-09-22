@@ -49,7 +49,22 @@ const updateActiveButton = () => {
     })
 }
 
+setInterval(() => {
+    if (true) {
+        console.log("yes I'm right")
+        index++;
+        console.log(index)
+        if (index === imgList.length) {
+            index = 0
+            console.log(index)
+        }
+    }
+    container.style.background = `url("../assets/${imgList[index]}.jpg") center/cover fixed no-repeat`
+    updateActiveButton()
+}, 3000);
+
 //events
+
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
         if (btn.classList.contains("btn-left")) {
@@ -69,7 +84,7 @@ buttons.forEach((btn) => {
                 console.log(index)
             }
         }
-        container.style.background = `url("assets/${imgList[index]}.jpg") center/cover fixed no-repeat`
+        container.style.background = `url("../assets/${imgList[index]}.jpg") center/cover fixed no-repeat`
         updateActiveButton()
     })
 })
